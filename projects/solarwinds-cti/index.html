@@ -6,35 +6,21 @@
 <title>SolarWinds SUNBURST — CTI Report | s3d-0x</title>
 <style>
   :root {
-    --bg: #ffffff;
-    --bg-alt: #f6f8fa;
-    --text: #24292e;
-    --text-muted: #586069;
-    --border: #e1e4e8;
-    --accent: #0366d6;
-    --accent-2: #1a7f37;
-    --badge-bg: #ddf4ff;
-    --badge-text: #0366d6;
-    --badge-green-bg: #dafbe1;
-    --badge-green-text: #1a7f37;
-    --table-head: #f6f8fa;
-    --code-bg: #f6f8fa;
+    --bg: #ffffff; --bg-alt: #f6f8fa; --text: #24292e;
+    --text-muted: #586069; --border: #e1e4e8;
+    --accent: #0366d6; --accent-2: #1a7f37;
+    --badge-bg: #ddf4ff; --badge-text: #0366d6;
+    --badge-green-bg: #dafbe1; --badge-green-text: #1a7f37;
+    --table-head: #f6f8fa; --code-bg: #f6f8fa;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0d1117;
-      --bg-alt: #161b22;
-      --text: #c9d1d9;
-      --text-muted: #8b949e;
-      --border: #30363d;
-      --accent: #58a6ff;
-      --accent-2: #3fb950;
-      --badge-bg: #1f6feb22;
-      --badge-text: #58a6ff;
-      --badge-green-bg: #3fb95022;
-      --badge-green-text: #3fb950;
-      --table-head: #161b22;
-      --code-bg: #161b22;
+      --bg: #0d1117; --bg-alt: #161b22; --text: #c9d1d9;
+      --text-muted: #8b949e; --border: #30363d;
+      --accent: #58a6ff; --accent-2: #3fb950;
+      --badge-bg: #1f6feb22; --badge-text: #58a6ff;
+      --badge-green-bg: #3fb95022; --badge-green-text: #3fb950;
+      --table-head: #161b22; --code-bg: #161b22;
     }
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,7 +30,6 @@
     line-height: 1.65; color: var(--text); background: var(--bg); font-size: 16px;
   }
   .container { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
-  
   header.hero {
     text-align: center; padding: 80px 24px 60px;
     background: linear-gradient(135deg, #0366d6 0%, #1a7f37 100%);
@@ -65,7 +50,6 @@
     font-size: 0.9em; transition: all 0.2s;
   }
   header.hero .links a:hover { background: rgba(255,255,255,0.2); border-color: white; }
-
   .toc {
     background: var(--bg-alt); border: 1px solid var(--border);
     border-radius: 10px; padding: 24px 28px; margin-bottom: 50px;
@@ -76,7 +60,6 @@
   .toc a { color: var(--text); text-decoration: none; transition: color 0.2s; }
   .toc a:hover { color: var(--accent); }
   @media (max-width: 600px) { .toc ol { columns: 1; } }
-
   section { margin-bottom: 60px; scroll-margin-top: 20px; }
   section h2 {
     color: var(--accent); font-size: 1.65em; margin-bottom: 20px;
@@ -94,7 +77,6 @@
   strong { color: var(--text); font-weight: 600; }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
-
   .callout {
     background: var(--bg-alt); border-left: 4px solid var(--accent);
     padding: 16px 20px; border-radius: 6px; margin: 20px 0;
@@ -102,7 +84,6 @@
   .callout strong { color: var(--accent); }
   .callout-green { border-left-color: var(--accent-2); }
   .callout-green strong { color: var(--accent-2); }
-
   table {
     width: 100%; border-collapse: collapse; margin: 18px 0;
     font-size: 0.88em; border: 1px solid var(--border);
@@ -120,18 +101,12 @@
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: var(--bg-alt); }
   .table-wrap { overflow-x: auto; margin: 18px 0; }
-
   .badge {
     display: inline-block; background: var(--badge-bg); color: var(--badge-text);
     padding: 3px 10px; border-radius: 12px; font-size: 0.78em;
     font-weight: 600; margin: 2px 2px 2px 0; white-space: nowrap;
   }
   .badge-green { background: var(--badge-green-bg); color: var(--badge-green-text); }
-  .badge-red { background: #ffebe9; color: #cf222e; }
-  @media (prefers-color-scheme: dark) {
-    .badge-red { background: #ffebe922; color: #ff7b72; }
-  }
-
   code {
     background: var(--code-bg); padding: 2px 6px; border-radius: 4px;
     font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
@@ -144,8 +119,6 @@
     font-size: 0.82em; line-height: 1.5;
   }
   pre code { background: none; border: none; padding: 0; font-size: inherit; }
-
-  /* IMAGES */
   figure { margin: 24px 0; text-align: center; }
   figure img {
     max-width: 100%; height: auto; border-radius: 8px;
@@ -155,44 +128,11 @@
     font-size: 0.85em; color: var(--text-muted);
     margin-top: 10px; font-style: italic; line-height: 1.5;
   }
-
-  .diamond { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
-  @media (max-width: 600px) { .diamond { grid-template-columns: 1fr; } }
-  .diamond-card {
-    background: var(--bg-alt); border: 1px solid var(--border);
-    border-radius: 10px; padding: 18px 20px;
-  }
-  .diamond-card h4 { margin-top: 0; color: var(--accent); font-size: 0.82em; }
-  .diamond-card p { margin-bottom: 0; font-size: 0.92em; }
-
-  .killchain { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0; }
-  .killchain-item {
-    flex: 1 1 auto; min-width: 140px; background: var(--bg-alt);
-    border: 1px solid var(--border); border-left: 3px solid var(--accent);
-    border-radius: 6px; padding: 12px 14px; font-size: 0.85em;
-  }
-  .killchain-item strong { display: block; color: var(--accent); margin-bottom: 4px; font-size: 0.92em; }
-
-  .timeline { position: relative; padding-left: 26px; margin: 20px 0; }
-  .timeline::before {
-    content: ''; position: absolute; left: 7px; top: 6px;
-    bottom: 6px; width: 2px; background: var(--border);
-  }
-  .timeline-item { position: relative; margin-bottom: 20px; }
-  .timeline-item::before {
-    content: ''; position: absolute; left: -24px; top: 6px;
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--accent); border: 2px solid var(--bg);
-  }
-  .timeline-item .date { font-weight: 700; color: var(--accent); font-size: 0.9em; margin-bottom: 2px; }
-  .timeline-item .desc { font-size: 0.92em; color: var(--text-muted); }
-
   footer {
     text-align: center; padding: 50px 24px 40px; color: var(--text-muted);
     font-size: 0.9em; border-top: 1px solid var(--border); margin-top: 40px;
   }
   footer a { color: var(--accent); }
-
   .back-top {
     position: fixed; bottom: 26px; right: 26px; background: var(--accent);
     color: white; width: 44px; height: 44px; border-radius: 50%;
@@ -213,6 +153,7 @@
   <p class="subtitle">A Cyber Threat Intelligence Case Study</p>
   <p class="meta">MITRE ATT&CK Campaign C0024 &nbsp;·&nbsp; Prepared by s3d-0x &nbsp;·&nbsp; September 2026</p>
   <div class="links">
+    <a href="/">← Back to Portfolio</a>
     <a href="https://github.com/s3d-0x" target="_blank">GitHub</a>
     <a href="https://attack.mitre.org/campaigns/C0024/" target="_blank">MITRE C0024</a>
   </div>
@@ -238,7 +179,6 @@
     </ol>
   </div>
 
-  <!-- ================= EXECUTIVE SUMMARY ================= -->
   <section id="exec-summary">
     <h2>Executive Summary</h2>
     <p>The SolarWinds SUNBURST campaign (MITRE C0024) represents one of the most significant supply-chain compromises in recent history. This report analyzes the campaign's tactics, techniques, and procedures (TTPs) and provides actionable detection engineering guidance for security operations centers (SOCs).</p>
@@ -255,7 +195,6 @@
     <p>This report demonstrates the application of cyber threat intelligence (CTI) analysis to detection engineering, with practical validation in a home lab environment.</p>
   </section>
 
-  <!-- ================= INTRODUCTION ================= -->
   <section id="introduction">
     <h2>Introduction</h2>
     <p>The SolarWinds supply-chain compromise (also known as SUNBURST) was discovered in December 2020. Attackers inserted malicious code into legitimate Orion software updates, which were then distributed to approximately 18,000 customers. A smaller subset of these victims experienced follow-on post-compromise activity.</p>
@@ -276,19 +215,16 @@
     <p><em>Raw Intelligence → Validated Facts → Assessments → Confidence → Intelligence Gaps → Impact → Detection Opportunities → Lab Validation.</em></p>
   </section>
 
-  <!-- ================= ATTACK CHAIN OVERVIEW ================= -->
   <section id="attack-chain">
     <h2>Attack Chain Overview</h2>
     <p>The diagram below traces the campaign from build-system compromise through to the attackers' ultimate collection and exfiltration objective. It maps each stage to the Validated Facts (F0x) that support it, and flags which stages this report's lab validation actually covers versus which remain outside its scope.</p>
 
     <figure>
-      <!-- IMAGE 1 -->
       <img src="/images/attack-chain.png" alt="SUNBURST Attack Chain Overview">
       <figcaption>Figure 0: SUNBURST attack chain from build compromise to exfiltration, with lab-validation coverage noted.</figcaption>
     </figure>
   </section>
 
-  <!-- ================= VALIDATED FACTS ================= -->
   <section id="facts">
     <h2>Validated Facts</h2>
     <p>The following facts were validated using authoritative sources including MITRE ATT&CK, CISA, NSA, FBI, Microsoft, and Mandiant/FireEye. Confidence here reflects <strong>source strength for a directly reported fact</strong>, not analytic inference — see the Assessments section for graded analytic judgments built on top of these facts.</p>
@@ -322,7 +258,6 @@
     </div>
   </section>
 
-  <!-- ================= ASSESSMENTS ================= -->
   <section id="assessments">
     <h2>Assessments</h2>
     <p>Based on the validated facts, the following analytic assessments were made. Confidence levels below were recalibrated to distinguish directly-evidenced conclusions from inferences: several judgments originally rated High have been revised to <strong>Medium</strong> where the underlying evidence supports a plausible conclusion but not a fully verified one (A05, A07). Reserving High confidence for claims with direct technical corroboration — rather than defaulting to it — is itself part of the discipline of analytic writing.</p>
@@ -343,13 +278,12 @@
         <tr><td>A10</td><td>Malware signatures alone provide incomplete visibility into this activity</td><td><span class="badge">High</span></td><td>Evidence signatures detected all associated activity</td></tr>
         <tr><td>A11</td><td>Cross-domain (endpoint/network/identity/cloud) detection is necessary for full coverage</td><td><span class="badge">High</span></td><td>Evidence single-domain telemetry was sufficient</td></tr>
         <tr><td>A12</td><td>Trusted-provider compromise creates material downstream risk for customers</td><td><span class="badge">High</span></td><td>Evidence provider compromise was effectively isolated</td></tr>
-        <tr><td>A13</td><td>Attribution to Russia's SVR is High confidence at the government-assessment level</td><td><span class="badge badge-green">High (assessment-level; not independently verifiable)</span></td><td>Public disclosure of underlying government intelligence</td></tr>
+        <tr><td>A13</td><td>Attribution to Russia's SVR is High confidence at the government-assessment level</td><td><span class="badge badge-green">High (assessment-level)</span></td><td>Public disclosure of underlying government intelligence</td></tr>
       </tbody>
     </table>
     </div>
   </section>
 
-  <!-- ================= INTELLIGENCE GAPS ================= -->
   <section id="gaps">
     <h2>Intelligence Gaps</h2>
     <ol>
@@ -364,7 +298,6 @@
     <p>These gaps represent the boundaries of public knowledge and highlight the importance of continuous intelligence collection and analysis.</p>
   </section>
 
-  <!-- ================= IMPACT ================= -->
   <section id="impact">
     <h2>Impact / "So What?"</h2>
     <p>The SolarWinds campaign demonstrates that a sophisticated intrusion can exploit trust at multiple layers — software distribution, authentication, identity, and cloud infrastructure. Consequently, defenders should not rely solely on malware signatures, software reputation, or password-based authentication monitoring; effective detection requires behavioral correlation across endpoint, network, identity, and cloud telemetry.</p>
@@ -388,7 +321,6 @@
     </ol>
   </section>
 
-  <!-- ================= DETECTION ENGINEERING ================= -->
   <section id="detections">
     <h2>Detection Engineering</h2>
 
@@ -406,28 +338,22 @@
     </table>
     </div>
 
-    <!-- DETECTION 1 -->
     <h3>Detection #1: Suspicious PowerShell (T1059.001)</h3>
-    <p><strong>Threat Intelligence Basis:</strong> F08 — APT29 used PowerShell during post-compromise operations. PowerShell is a powerful scripting language frequently abused by attackers for execution, reconnaissance, and lateral movement.</p>
+    <p><strong>Threat Intelligence Basis:</strong> F08 — APT29 used PowerShell during post-compromise operations.</p>
     <p><strong>ATT&CK Mapping:</strong> T1059.001 — Command and Scripting Interpreter: PowerShell</p>
-    <p><strong>Detection Hypothesis:</strong> Suspicious PowerShell patterns including encoded commands, web requests, and execution bypass can be detected and investigated using endpoint and SIEM telemetry.</p>
-    <p><strong>Telemetry Required:</strong> Sysmon Event ID 1 (Process Creation), PowerShell Operational Log Event ID 4104</p>
+    <p><strong>Detection Hypothesis:</strong> Suspicious PowerShell patterns including encoded commands, web requests, and execution bypass can be detected using endpoint and SIEM telemetry.</p>
+    <p><strong>Telemetry Required:</strong> Sysmon Event ID 1, PowerShell Operational Log Event ID 4104</p>
 
     <h4>Lab Simulation</h4>
     <pre><code>powershell -Command "Invoke-WebRequest -UseBasicParsing https://example.com"</code></pre>
-    <p><em>Rationale: This command mimics the behavior of downloading second-stage payloads, consistent with APT29's post-compromise activities (F05, F11).</em></p>
 
     <h4>Telemetry Verification</h4>
-    <p>Before testing the detection, the data pipeline was confirmed operational (Sysmon process creation events flowing to Splunk from a Windows 10 endpoint).</p>
-
     <figure>
-      <!-- IMAGE 2 -->
-      <img src="images/detection1-telemetry.png" alt="Sysmon telemetry verification">
+      <img src="/images/detection1-telemetry.png" alt="Sysmon telemetry verification">
       <figcaption>Figure 1: Sysmon process creation events flowing to Splunk from Windows 10 endpoint.</figcaption>
     </figure>
 
     <h4>Detection Query Results</h4>
-    <p>The combined detection query identified all suspicious patterns:</p>
     <pre><code>index=* EventCode=1 Image="*powershell.exe"
 ( CommandLine="*-e *" OR CommandLine="*-EncodedCommand *"
  OR CommandLine="*Invoke-WebRequest*"
@@ -438,35 +364,26 @@
 | sort - _time</code></pre>
 
     <figure>
-      <!-- IMAGE 3 -->
-      <img src="images/detection1-results.png" alt="Combined suspicious PowerShell detection">
+      <img src="/images/detection1-results.png" alt="Combined suspicious PowerShell detection">
       <figcaption>Figure 2: Combined suspicious PowerShell detection identifying encoded commands and web requests.</figcaption>
     </figure>
 
-    <h4>Investigation</h4>
-    <p>One encoded command was decoded for analysis:</p>
-    <pre><code>index=* EventCode=1 CommandLine="*-e V3JpdGUtSG9zdCAiQ1RJIFBvcnRmb2xpbyBUZXN0Ig==*"
-| eval DecodedCommand=base64decode("V3JpdGUtSG9zdCAiQ1RJIFBvcnRmb2xpbyBUZXN0Ig==")
-| table _time, host, User, CommandLine, DecodedCommand</code></pre>
-    <p><strong>Result:</strong> The command decoded to <code>Write-Host "CTI Portfolio Test"</code>, confirming this was a harmless test command.</p>
-    <p><strong>Assessment:</strong> While these commands were benign tests, the detection patterns are consistent with attacker behavior documented in the SolarWinds campaign. In a production environment, Base64-encoded PowerShell and web requests would warrant immediate investigation.</p>
+    <p><strong>Assessment:</strong> While these commands were benign tests, the detection patterns are consistent with attacker behavior documented in the SolarWinds campaign.</p>
 
     <div class="callout callout-green">
-      <strong>Tuning Considerations (False Positives):</strong> As written, this query would generate significant noise in most enterprise environments. Recommended tuning before production deployment:
+      <strong>Tuning Considerations (False Positives):</strong>
       <ul style="margin-top: 10px; margin-bottom: 0;">
         <li>Baseline normal PowerShell usage per host/role for 1–2 weeks before enabling alerting.</li>
         <li>Exclude known-good parent processes (recognized RMM/patch-management agents).</li>
-        <li>Prioritize alerts where PowerShell spawns from an unusual parent (Office apps, browsers, scripting hosts).</li>
+        <li>Prioritize alerts where PowerShell spawns from an unusual parent (Office apps, browsers).</li>
         <li>Treat Base64-decoded content as secondary enrichment, not a standalone alerting trigger.</li>
       </ul>
     </div>
 
-    <!-- DETECTION 2 -->
     <h3>Detection #2: Scheduled Task Creation (T1053.005)</h3>
-    <p><strong>Threat Intelligence Basis:</strong> F10 — APT29 used scheduled tasks in post-compromise activity, including persistence and lateral movement.</p>
+    <p><strong>Threat Intelligence Basis:</strong> F10 — APT29 used scheduled tasks in post-compromise activity.</p>
     <p><strong>ATT&CK Mapping:</strong> T1053.005 — Scheduled Task/Job: Scheduled Task</p>
-    <p><strong>Detection Hypothesis:</strong> Scheduled task creation can be detected through Sysmon process creation events for schtasks.exe, and suspicious patterns can be identified through task naming and command-line parameters.</p>
-    <p><strong>Telemetry Required:</strong> Sysmon Event ID 1 (Process Creation), Windows Security Log Event ID 4698</p>
+    <p><strong>Telemetry Required:</strong> Sysmon Event ID 1, Windows Security Log Event ID 4698</p>
 
     <h4>Lab Simulation</h4>
     <pre><code>schtasks /create /tn "CTI_Lab_Test" /tr "C:\Windows\System32\calc.exe" /sc ONCE /st 12:00 /ru SYSTEM</code></pre>
@@ -477,8 +394,7 @@
 | sort - _time</code></pre>
 
     <figure>
-      <!-- IMAGE 4 -->
-      <img src="images/detection2-schtasks.png" alt="Scheduled task creation detected via Sysmon">
+      <img src="/images/detection2-schtasks.png" alt="Scheduled task creation detected via Sysmon">
       <figcaption>Figure 3: Scheduled task creation detected via Sysmon process creation.</figcaption>
     </figure>
 
@@ -488,28 +404,16 @@
 | sort - _time</code></pre>
 
     <figure>
-      <!-- IMAGE 5 -->
-      <img src="images/detection2-task-details.png" alt="Scheduled task details">
+      <img src="/images/detection2-task-details.png" alt="Scheduled task details">
       <figcaption>Figure 4: Scheduled task details showing command and trigger configuration.</figcaption>
     </figure>
 
-    <p><strong>Assessment:</strong> The task was created as a test and subsequently deleted. In a real intrusion, scheduled tasks are commonly used for persistence, and randomly named tasks with suspicious execution paths would warrant immediate investigation.</p>
+    <p><strong>Assessment:</strong> The task was created as a test and subsequently deleted. In a real intrusion, scheduled tasks are commonly used for persistence.</p>
 
-    <div class="callout callout-green">
-      <strong>Tuning Considerations (False Positives):</strong>
-      <ul style="margin-top: 10px; margin-bottom: 0;">
-        <li>Filter to tasks running as SYSTEM or a privileged account combined with an unusual <code>/tr</code> target (PowerShell, cmd.exe, LOLBins, or binaries in <code>%TEMP%</code> / <code>%APPDATA%</code>).</li>
-        <li>Flag random-looking task names or names mimicking legitimate Windows tasks.</li>
-        <li>Correlate task creation with the parent process.</li>
-      </ul>
-    </div>
-
-    <!-- DETECTION 3 -->
     <h3>Detection #3: WMI Activity (T1047)</h3>
     <p><strong>Threat Intelligence Basis:</strong> F09 — APT29 used WMI for remote execution and lateral movement.</p>
     <p><strong>ATT&CK Mapping:</strong> T1047 — Windows Management Instrumentation</p>
-    <p><strong>Detection Hypothesis:</strong> WMI activity, particularly process creation via WMI, can be detected through Sysmon process creation events.</p>
-    <p><strong>Telemetry Required:</strong> Sysmon Event ID 1 (Process Creation), Windows WMI-Activity Logs</p>
+    <p><strong>Telemetry Required:</strong> Sysmon Event ID 1, Windows WMI-Activity Logs</p>
 
     <h4>Lab Simulation</h4>
     <pre><code>wmic process call create "calc.exe"</code></pre>
@@ -520,237 +424,4 @@
 | sort - _time</code></pre>
 
     <figure>
-      <!-- IMAGE 6 -->
-      <img src="images/detection3-wmi.png" alt="WMI activity detected via Sysmon">
-      <figcaption>Figure 5: WMI activity detected via Sysmon.</figcaption>
-    </figure>
-
-    <p><strong>Assessment:</strong> WMI is a powerful tool frequently abused by attackers. The <code>wmic process call create</code> command is particularly suspicious as it indicates process creation through WMI, often used for lateral movement. In a production environment, this activity would warrant correlation with other indicators and investigation of the parent process.</p>
-
-    <!-- DETECTION 4 -->
-    <h3>Detection #4: Authentication Anomalies (T1078)</h3>
-    <p><strong>Threat Intelligence Basis:</strong> F06 — APT29 used compromised credentials to access systems and support lateral movement.</p>
-    <p><strong>ATT&CK Mapping:</strong> T1078 — Valid Accounts</p>
-    <p><strong>Detection Hypothesis:</strong> Unusual authentication patterns, including remote logins and failed logins, can be detected through Windows Security Logs.</p>
-    <p><strong>Telemetry Required:</strong> Windows Security Log Event ID 4624 (Successful Logon), Event ID 4625 (Failed Logon)</p>
-
-    <h4>Lab Simulation</h4>
-    <p>Remote Desktop login from Ubuntu to Windows 10.</p>
-
-    <h4>Detection Query Results</h4>
-    <pre><code>index=* EventCode=4624 Logon_Type=10
-| table _time, host, Account_Name, Workstation_Name, Logon_Type, Source_Network_Address
-| sort - _time</code></pre>
-
-    <figure>
-      <!-- IMAGE 7 -->
-      <img src="images/detection4-rdp.png" alt="Remote authentication detected">
-      <figcaption>Figure 6: Remote authentication (RDP) detected in Windows Security Logs.</figcaption>
-    </figure>
-
-    <p><strong>Assessment:</strong> Remote logins (Logon Type 10) are common for both legitimate administrators and attackers. In a production environment, this activity should be correlated with:</p>
-    <ul>
-      <li>Time of day (outside business hours = more suspicious)</li>
-      <li>Source IP (known vs. unknown)</li>
-      <li>Account (privileged accounts are higher risk)</li>
-      <li>Other activity from the same user/host</li>
-    </ul>
-
-    <!-- DETECTION 5 -->
-    <h3>Detection #5: Logging Tampering (T1562.001)</h3>
-    <p><strong>Threat Intelligence Basis:</strong> F18 — APT29 attempted to reduce security visibility by interfering with security monitoring/logging.</p>
-    <p><strong>ATT&CK Mapping:</strong> T1562.001 — Impair Defenses: Disable or Modify Tools</p>
-    <p><strong>Detection Hypothesis:</strong> Attempts to tamper with logging, including clearing logs or using logging tools, can be detected through Sysmon process creation events.</p>
-    <p><strong>Telemetry Required:</strong> Sysmon Event ID 1 (Process Creation), Windows Event Log Event ID 104 (Log Cleared)</p>
-
-    <h4>Lab Simulation</h4>
-    <pre><code>wevtutil get-log System</code></pre>
-    <p><em>Note: This is a safe query command that does not actually clear logs.</em></p>
-
-    <h4>Detection Query Results</h4>
-    <pre><code>index=* wevtutil
-| table _time, host, EventCode, Image, CommandLine
-| sort - _time</code></pre>
-
-    <figure>
-      <!-- IMAGE 8 -->
-      <img src="images/detection5-wevtutil.png" alt="Logging tool usage detected">
-      <figcaption>Figure 7: Logging tool usage detected via Sysmon.</figcaption>
-    </figure>
-
-    <p><strong>Assessment:</strong> <code>wevtutil.exe</code> is a legitimate Windows tool for managing event logs. However, its usage with commands like <code>cl</code> (clear) or <code>disable</code> is highly suspicious. In a production environment, any usage of <code>wevtutil</code> with destructive commands would warrant immediate investigation.</p>
-  </section>
-
-  <!-- ================= LAB VALIDATION ================= -->
-  <section id="validation">
-    <h2>Lab Validation Results</h2>
-    <p>The lab validation successfully demonstrated detection of five key behaviors documented in the SolarWinds campaign:</p>
-
-    <div class="table-wrap">
-    <table>
-      <thead><tr><th>Detection</th><th>Test Performed</th><th>Result</th><th>Key Finding</th></tr></thead>
-      <tbody>
-        <tr><td>PowerShell</td><td>Invoke-WebRequest to example.com</td><td><span class="badge badge-green">Detected</span></td><td>Web requests in PowerShell are visible and should be monitored</td></tr>
-        <tr><td>Scheduled Task</td><td>Created CTI_Lab_Test task</td><td><span class="badge badge-green">Detected</span></td><td>Task creation is visible through Sysmon</td></tr>
-        <tr><td>WMI</td><td>wmic process call create</td><td><span class="badge badge-green">Detected</span></td><td>WMI process creation is detectable</td></tr>
-        <tr><td>Authentication</td><td>RDP login from Ubuntu</td><td><span class="badge badge-green">Detected</span></td><td>Remote logins are captured in Security Logs</td></tr>
-        <tr><td>Logging Tampering</td><td>wevtutil query command</td><td><span class="badge badge-green">Detected</span></td><td>Logging tool usage is visible through Sysmon</td></tr>
-      </tbody>
-    </table>
-    </div>
-
-    <h3>Key Learnings</h3>
-    <ol>
-      <li>Sysmon provides critical visibility into process creation and command-line activity.</li>
-      <li>Windows Security Logs are essential for authentication monitoring but may require audit policy configuration.</li>
-      <li>PowerShell logging (ScriptBlock) provides deep visibility into executed commands.</li>
-      <li>Behavioral detection is more durable than static IOC-based detection.</li>
-      <li>Correlation across multiple data sources provides the most complete picture.</li>
-    </ol>
-
-    <h3>Limitations of Lab Validation</h3>
-    <ol>
-      <li>No actual malware execution — testing simulated post-compromise behaviors only.</li>
-      <li>Limited environment — single-host lab without enterprise complexity.</li>
-      <li>No network telemetry — Zeek/Suricata not integrated.</li>
-      <li>No cloud environment testing — SAML/cookie abuse not validated.</li>
-    </ol>
-  </section>
-
-  <!-- ================= RECOMMENDATIONS ================= -->
-  <section id="recommendations">
-    <h2>Recommendations</h2>
-
-    <h3>For SOC Defenders</h3>
-    <h4>1. Enable Comprehensive Logging</h4>
-    <ul>
-      <li>Enable Sysmon with a robust configuration</li>
-      <li>Enable PowerShell ScriptBlock logging</li>
-      <li>Enable security audit policies for logon, object access, and policy changes</li>
-    </ul>
-
-    <h4>2. Implement Behavioral Detection</h4>
-    <ul>
-      <li>Monitor for encoded PowerShell commands (<code>-e</code>, <code>-EncodedCommand</code>)</li>
-      <li>Detect <code>Invoke-WebRequest</code> and <code>DownloadString</code> in PowerShell</li>
-      <li>Alert on <code>schtasks /create</code> and <code>wmic process call create</code>, tuned per the false-positive guidance above</li>
-      <li>Monitor for authentication anomalies (time, location, frequency)</li>
-    </ul>
-
-    <h4>3. Implement Correlation</h4>
-    <ul>
-      <li>Correlate endpoint, network, identity, and cloud telemetry</li>
-      <li>Use a SIEM for central visibility and alerting</li>
-      <li>Build dashboards for suspicious activity patterns</li>
-    </ul>
-
-    <h4>4. Focus on Identity Protection</h4>
-    <ul>
-      <li>Implement MFA</li>
-      <li>Monitor for token and session cookie abuse</li>
-      <li>Audit federation trust settings</li>
-      <li>Monitor for privileged account usage</li>
-    </ul>
-
-    <h4>5. Develop Incident Response Playbooks</h4>
-    <ul>
-      <li>Playbook for suspicious PowerShell activity</li>
-      <li>Playbook for credential abuse</li>
-      <li>Playbook for scheduled task creation</li>
-      <li>Playbook for logging tampering attempts</li>
-    </ul>
-
-    <h3>For Threat Intelligence</h3>
-    <h4>1. Continuously Monitor</h4>
-    <ul>
-      <li>Track APT29 TTPs and infrastructure</li>
-      <li>Monitor for new intelligence gaps being filled</li>
-      <li>Track evolving detection opportunities</li>
-    </ul>
-
-    <h4>2. Share Intelligence</h4>
-    <ul>
-      <li>Participate in ISACs and information-sharing groups</li>
-      <li>Share IOCs and behavioral indicators</li>
-      <li>Contribute to open-source intelligence (OSINT)</li>
-    </ul>
-
-    <h4>3. Update ATT&CK Mappings</h4>
-    <ul>
-      <li>Regularly review and update TTP mappings</li>
-      <li>Track new techniques and sub-techniques</li>
-      <li>Map detection to MITRE ATT&CK</li>
-    </ul>
-  </section>
-
-  <!-- ================= LIMITATIONS ================= -->
-  <section id="limitations">
-    <h2>Limitations</h2>
-
-    <h4>1. No Actual Malware Reproduction</h4>
-    <ul>
-      <li>The lab validation did not reproduce the actual SUNBURST malware</li>
-      <li>No malicious code was executed</li>
-      <li>Testing simulated post-compromise behaviors only</li>
-    </ul>
-
-    <h4>2. Limited Environment</h4>
-    <ul>
-      <li>Testing occurred in a single-host lab environment</li>
-      <li>Did not include full enterprise complexity</li>
-      <li>Did not include network telemetry (Zeek/Suricata)</li>
-      <li>Did not include cloud environment testing</li>
-    </ul>
-
-    <h4>3. Limited Scope</h4>
-    <ul>
-      <li>Only 5 of many SolarWinds TTPs were tested</li>
-      <li>Supply-chain compromise itself was not reproduced</li>
-      <li>Attribution analysis is based on government reports, not independent assessment</li>
-    </ul>
-
-    <h4>4. Telemetry Limitations</h4>
-    <ul>
-      <li>Some event logs may not be available in all environments</li>
-      <li>Audit policies may vary across organizations</li>
-      <li>SIEM configuration differences may impact detection</li>
-    </ul>
-
-    <h4>5. False Positive Considerations</h4>
-    <ul>
-      <li>Detection tuning requires production-specific baselining</li>
-      <li>The false-positive guidance in this report is analytic reasoning, not empirical measurement against real enterprise traffic</li>
-      <li>Risk-based scoring would require additional development</li>
-    </ul>
-  </section>
-
-  <!-- ================= REFERENCES ================= -->
-  <section id="references">
-    <h2>References</h2>
-    <ol>
-      <li>MITRE ATT&CK. (2023). Campaign C0024 — SolarWinds Compromise. <a href="https://attack.mitre.org/campaigns/C0024/">attack.mitre.org/campaigns/C0024/</a></li>
-      <li>MITRE ATT&CK. (2023). Software S0559 — SUNBURST. <a href="https://attack.mitre.org/software/S0559/">attack.mitre.org/software/S0559/</a></li>
-      <li>MITRE ATT&CK. (2023). Software S0562 — SUNSPOT. <a href="https://attack.mitre.org/software/S0562/">attack.mitre.org/software/S0562/</a></li>
-      <li>MITRE ATT&CK. (2023). Technique T1553.002 — Code Signing. <a href="https://attack.mitre.org/techniques/T1553/002/">attack.mitre.org/techniques/T1553/002/</a></li>
-      <li>CISA, NSA, &amp; FBI. (2021, April 15). Russian SVR Targeting US and Allied Networks. <a href="https://www.cisa.gov/news-events/alerts/2021/04/15/nsa-cisa-fbi-joint-advisory-russian-svr-targeting-us-and-allied">cisa.gov</a></li>
-      <li>CISA. (2021). SolarWinds and Active Directory/M365 Detection Resources.</li>
-      <li>Microsoft. (2020). SolarWinds/Solorigate Technical Analyses.</li>
-      <li>Mandiant/FireEye. (2020). SolarWinds Supply Chain Attack Analysis.</li>
-      <li>SolarWinds. (2020). Security Advisory.</li>
-      <li>National Security Agency. (2021). Cybersecurity Information Sheets.</li>
-      <li>CrowdStrike. (2021). SUNSPOT and SUNBURST Technical Analysis.</li>
-      <li>Splunk. (2024). Security Detection and Investigation Documentation.</li>
-      <li>Microsoft Sysinternals. (2024). Sysmon Documentation.</li>
-      <li>Bianco, D. (2014). The Pyramid of Pain. <a href="http://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html">detect-respond.blogspot.com</a></li>
-    </ol>
-  </section>
-
-</div>
-
-<footer>
-  <p><strong>TLP:CLEAR</strong> — This report is intended for defensive and educational purposes.</p>
-  <p style="margin-top: 10px;">© 2026 s3d-0x &nbsp;·&nbsp; <a href="https://github.com/s3d-0x/s3d-0x.github.io">View Source</a></p>
-</footer>
-
-</body>
-</html>
+      <img src="/
