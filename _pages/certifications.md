@@ -6,18 +6,18 @@ permalink: /certifications/
 
 # Certifications
 
-## Completed
+## Certifications
 
-Certifications and courses will be listed here.
+My certifications and professional training will be listed here.
 
 ---
 
-## In Progress
+## Currently Learning
 
 ### Cybersecurity
 
-Currently developing practical cybersecurity and security operations skills.
+Developing practical skills in security operations, SIEM, threat detection, and incident response.
 
 ### Networking
 
-Building networking knowledge through hands-on labs and coursework.
+Continuing to develop networking and infrastructure knowledge.
