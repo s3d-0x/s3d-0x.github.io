@@ -6,24 +6,24 @@ permalink: /about/
 
 # About Me
 
-I am a cybersecurity student developing practical skills in cybersecurity, networking, systems, and security operations.
+I am a cybersecurity student interested in building practical technical skills and developing a career in cybersecurity.
 
-My goal is to build strong technical foundations and gain hands-on experience through personal projects, labs, and continuous learning.
+My interests include cybersecurity, networking, Linux, Windows, security monitoring, and infrastructure.
 
-## Areas of Interest
+I believe in learning by building and documenting practical projects.
+
+## Interests
 
 - Cybersecurity
 - Network Security
-- Defensive Security
-- SOC Analysis
+- SOC Operations
 - SIEM
+- Threat Detection
 - Linux
 - Windows Security
-- Cloud Security
 - Networking
+- Cloud Security
 
-## My Approach
+## Currently Learning
 
-I believe the best way to learn cybersecurity is through practical experience.
-
-That's why I build projects, configure environments, investigate security events, and document what I learn.
+I am continuously developing my technical knowledge through university studies, hands-on labs, personal projects, and cybersecurity training.
