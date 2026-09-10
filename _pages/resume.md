@@ -6,37 +6,32 @@ permalink: /resume/
 
 # Resume
 
-My resume includes my education, technical skills, projects, certifications, and experience.
+My resume contains my education, technical skills, projects, certifications, and professional development.
 
 ## Education
 
-**Your University**
+**University**
 
-Degree / Program
+Cybersecurity / Computer Science / Related Field
 
 ---
 
 ## Technical Skills
 
-### Cybersecurity
-- SIEM
-- Security Monitoring
-- Threat Detection
-- Incident Investigation
+**Cybersecurity:**  
+SIEM · Security Monitoring · Threat Detection · Incident Investigation
 
-### Networking
-- TCP/IP
-- Routing & Switching
-- Network Security
-- Troubleshooting
+**Networking:**  
+TCP/IP · Routing · Switching · Network Security
 
-### Systems
-- Linux
-- Windows
-- Active Directory
+**Systems:**  
+Linux · Windows · Active Directory
 
-### Tools
-- Splunk
-- Wireshark
-- Git
-- VMware
+**Tools:**  
+Splunk · Sysmon · Wireshark · VMware · Git · Azure
+
+---
+
+## Download
+
+My latest resume will be available here.
