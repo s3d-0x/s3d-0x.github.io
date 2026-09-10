@@ -1,11 +1,36 @@
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes"
 
 minimal_mistakes_skin: "dark"
 
-title: "profile"
-name: "saad"
-description: "Cybersecurity Student | Aspiring Security Professional"
-url: "https://saad.github.io"
+locale: "en-US"
+
+title: "Portfolio"
+name: "Your Name"
+description: "Cybersecurity Student | Technology | Networking"
+url: "https://s3d-0x.github.io"
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+include:
+  - _pages
 
 plugins:
   - jekyll-include-cache
+
+author:
+  name: "Your Name"
+  bio: "Cybersecurity Student & Aspiring Security Professional"
+  location: "Jordan"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/s3d-0x"
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
