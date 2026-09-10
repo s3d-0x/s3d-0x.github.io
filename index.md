@@ -35,9 +35,8 @@ Developing practical skills in defensive security, security monitoring, SIEM, th
 
 Building hands-on experience with networking, network security, troubleshooting, and infrastructure.
 
-### 💻 Technology
+### 
 
-Working with Linux, Windows, virtualization, cloud technologies, and security tools.
 
 ---
 
