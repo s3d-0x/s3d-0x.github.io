@@ -6,11 +6,16 @@ permalink: /contact/
 
 # Contact
 
-I'm always interested in connecting with people in cybersecurity, technology, and networking.
+I'm interested in connecting with people working in cybersecurity, networking, and technology.
 
-## Find Me Online
+## GitHub
 
-- **GitHub:** [Your GitHub](https://github.com/YOUR-USERNAME)
-- **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/)
+[github.com/s3d-0x](https://github.com/s3d-0x)
 
-For professional opportunities or collaboration, feel free to reach out through LinkedIn.
+## LinkedIn
+
+Add LinkedIn profile here.
+
+## Email
+
+Add professional email here.
