@@ -1,51 +1,57 @@
 ---
-layout: home
-author_profile: true
+layout: splash
+title: "Cybersecurity Portfolio"
+excerpt: "Cybersecurity • Networking • Technology"
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/header.jpg
+  actions:
+    - label: "View My Projects"
+      url: "/projects/"
+      class: "btn btn--primary"
+    - label: "About Me"
+      url: "/about/"
+      class: "btn btn--light-outline"
 ---
 
-# Hi, I'm Your Name 👋
+# Cybersecurity Portfolio
 
 ## Cybersecurity Student & Aspiring Security Professional
 
-I'm passionate about cybersecurity, networking, and building practical technical projects.
+Welcome to my personal portfolio.
 
-I use this portfolio to document my projects, technical skills, certifications, and cybersecurity journey.
-
----
-
-## Featured Projects
-
-### 🔐 Cybersecurity Projects
-
-Practical cybersecurity projects demonstrating security monitoring, investigation, networking, and defensive security skills.
-
-### 🌐 Networking Projects
-
-Hands-on networking and infrastructure projects focused on network configuration, troubleshooting, and security.
-
-### 💻 Technical Projects
-
-Programming and technical projects demonstrating problem solving and software development skills.
+I use this website to document my technical projects, cybersecurity learning, certifications, and practical experience.
 
 ---
 
-## What I'm Learning
+## What I Do
 
-- Cybersecurity
-- Network Security
-- SOC Operations
-- SIEM
-- Linux
-- Windows Security
-- Networking
-- Cloud Security
+### 🔐 Cybersecurity
+
+Developing practical skills in defensive security, security monitoring, SIEM, threat detection, and incident investigation.
+
+### 🌐 Networking
+
+Building hands-on experience with networking, network security, troubleshooting, and infrastructure.
+
+### 💻 Technology
+
+Working with Linux, Windows, virtualization, cloud technologies, and security tools.
 
 ---
 
-## Explore My Portfolio
+## Featured Areas
 
-**[View Projects →](projects/)**
+**Cybersecurity**  
+Security operations, detection, investigation, and defensive security.
 
-**[About Me →](about/)**
+**Networking**  
+Network configuration, troubleshooting, protocols, and security.
 
-**[View Certifications →](certifications/)**
+**Projects**  
+Practical technical projects demonstrating what I learn.
+
+---
+
+[Explore My Projects →](projects/)
