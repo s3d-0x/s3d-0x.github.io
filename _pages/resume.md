@@ -6,7 +6,6 @@ permalink: /resume/
 
 # Resume
 
-My resume contains my education, technical skills, projects, certifications, and professional development.
 
 ## Education
 
